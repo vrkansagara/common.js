@@ -16,3 +16,12 @@ getCookieValue=function(f) {
         return null
     }
 protocol=("https:" === document.location.protocol ? "https://" : "http://")
+head=document.getElementsByTagName("HEAD").item(0);
+element=function(item){return document.createElement(item);
+deleteCookie=function(a) {
+  if (!a) {
+   return
+  }
+  document.cookie = a + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/; example.com;"
+ }
+
