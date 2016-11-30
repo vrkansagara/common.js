@@ -15,3 +15,4 @@ getCookieValue=function(f) {
         }
         return null
     }
+protocol=("https:" === document.location.protocol ? "https://" : "http://")
