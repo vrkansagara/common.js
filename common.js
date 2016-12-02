@@ -24,4 +24,6 @@ deleteCookie=function(a) {
   }
   document.cookie = a + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/; example.com;"
  }
-
+pathname = window.location.pathname; // Returns path only
+url      = window.location.href;   // Return full url
+getHasValue= window.location.hash.substr(1);
