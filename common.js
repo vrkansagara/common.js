@@ -11,3 +11,13 @@ url      = window.location.href;   // Return full url
 getHasValue= window.location.hash.substr(1);
 getWithHasValue= window.location.hash.substr(0);
 activeTab=function (tab){ $('.nav-tabs a[href="#' + tab + '"]').tab('show');} };
+local_port = window.location.port;
+iurl=function(local_port){
+				if(local_port =="" || local_port == "80") {
+            var iurl=window.location.href;
+								if(iurl.indexOf("http://")==0){
+									iurl=iurl.replace("http://", "https://");
+									window.location.href=iurl;
+								}
+        }
+}
