@@ -20,4 +20,12 @@ iurl=function(local_port){
 									window.location.href=iurl;
 								}
         }
-}
+function getFormData(formId){
+    var queryString = $('#' + formId).serialize(),
+        obj = {};
+    queryString.split("&").forEach(function (element, index, arr){
+        var keyValue = element.split("=");
+        obj[keyValue[0]] = keyValue[1];
+    });
+    return obj;
+}}
